@@ -3,11 +3,11 @@ function getQueryParams(query){
         return 
     }
 
-    let search  = ''
+    let search  = []
 
     for(const key in query){
-        search += `${key}=${query[key]}`
+        search.push(`${key}=${query[key]}`)
     }
 
-    return search
+    return search.join('&')
 }
